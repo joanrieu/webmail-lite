@@ -840,11 +840,6 @@ abstract class ActionsBase
 			else if ($mResponse instanceof \MailSo\Base\Collection)
 			{
 				$aCollection = $mResponse->GetAsArray();
-				if (150 < \count($aCollection) && $mResponse instanceof \MailSo\Mime\EmailCollection)
-				{
-					$aCollection = \array_slice($aCollection, 0, 150);
-				}
-				
 				$mResult = $this->responseObject($oAccount, $aCollection, $sParent, $aParameters);
 				unset($aCollection);
 			}
