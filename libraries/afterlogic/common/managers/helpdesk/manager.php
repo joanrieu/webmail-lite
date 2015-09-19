@@ -190,7 +190,7 @@ class CApiHelpdeskManager extends AApiManagerWithStorage
 			$sSubjectPrefix = '';
 			if ($oThread && 0 < $oThread->PostCount - 1)
 			{
-				$sSubjectPrefix = 'Re'.(2 < $oThread->PostCount ? '['.($oThread->PostCount - 1).']' : '').': ';
+				$sSubjectPrefix = 'Re: ';
 			}
 
 			$sAttachments = '';
